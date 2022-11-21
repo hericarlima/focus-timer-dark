@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+
+    color: #000000;
+    background: #FFFFFF;
+
+    display: grid;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+}
+
+.hide {
+    display: none;
+}
+
+.clock {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    display: flex;
+    gap: 4rem;
+}
+
+.sounds {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: "A B"
+    "C D";
+}
+
+.sounds #forest,
+.sounds #selectForest {
+    grid-area: "A";
+}
+
+.sounds #rain,
+.sounds #selectRain {
+    grid-area: "B";
+}
+
+.sounds #people,
+.sounds #selectPeople {
+    grid-area: "C";
+}
+
+.sounds #fire,
+.sounds #selectFire {
+    grid-area: "D";
+}
+
+#forest, #selectForest,
+#rain, #selectRain,
+#people, #selectPeople,
+#fire, #selectFire {
+    position: relative;
+}
+
+input {
+    position: absolute;
+    width: 9rem;
+
+    left: 2.5rem;
+    bottom: 1.5rem;
+    z-index: 1;
+}
+
+
+
+button {
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+button img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.mode {
+    position: absolute;
+    top: 0;
+    right: 6.4rem;
+}
+
+
