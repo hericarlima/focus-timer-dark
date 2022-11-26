@@ -1,23 +1,13 @@
 import Events from "./events.js"
 import Timer from "./timer.js"
+import Sounds from "./sounds.js"
 
 import {
     buttonPlay,
     buttonPause,
-    buttonStop,
-    buttonIncrease,
-    buttonDecrease,
     minutesDisplay,
     secondsDisplay,
-    buttonLight,
-    buttonDark,
-    soundForest,
-    soundRain,
-    soundPeople,
-    soundFire,
-    volume,
-    html
-} from './elements.js'
+ } from './elements.js'
 
 const timer = Timer({
     minutesDisplay,
@@ -26,7 +16,10 @@ const timer = Timer({
     buttonPlay
 })
 
-Events(timer)
+const sounds = Sounds()
+
+Events(timer, sounds)
+
 
 
 

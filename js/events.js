@@ -15,7 +15,7 @@ import {
     html
 } from "./elements.js"
 
-export default function Events (timer) {
+export default function Events (timer, sounds) {
     
     function changeTheme(){
         buttonDark.classList.toggle('hide')
@@ -55,21 +55,21 @@ export default function Events (timer) {
     
     soundForest.addEventListener('click', function(){
         soundForest.classList.toggle('active')  
-        //sons 
-    })  
-
+        soundForest.className === 'forest active' ? sounds.forest.play() : sounds.forest.pause()
+    })
+    
     soundRain.addEventListener('click', function(){
         soundRain.classList.toggle('active')
-        //sons
+        soundRain.className === 'rain active' ? sounds.rain.play() : sounds.rain.pause()        
     })
         
     soundPeople.addEventListener('click', function(){
         soundPeople.classList.toggle('active')
-        //sons
+        soundPeople.className === 'people active' ? sounds.people.play() : sounds.people.pause()
     })
 
     soundFire.addEventListener('click', function(){
         soundFire.classList.toggle('active')
-        //sons
+        soundFire.className === 'fire active' ? sounds.fire.play() : sounds.fire.pause()
     })   
 }
