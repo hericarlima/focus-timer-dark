@@ -14,7 +14,11 @@ const soundForest = document.querySelector('.forest')
 const soundRain = document.querySelector('.rain')
 const soundPeople = document.querySelector('.people')
 const soundFire = document.querySelector('.fire')
-const volume = document.querySelector('.volume')
+
+const volForest = document.querySelector('.volForest')
+const volRain = document.querySelector('.volRain')
+const volPeople = document.querySelector('.volPeople')
+const volFire = document.querySelector('.volFire')
 
 const html = document.querySelector('html')
 
@@ -32,6 +36,9 @@ export {
     soundRain,
     soundPeople,
     soundFire,
-    volume,
+    volForest,
+    volRain,
+    volPeople,
+    volFire,
     html
 }

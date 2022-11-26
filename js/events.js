@@ -11,7 +11,10 @@ import {
     soundRain,
     soundPeople,
     soundFire,
-    volume,
+    volForest,
+    volRain,
+    volPeople,
+    volFire,
     html
 } from "./elements.js"
 
@@ -26,26 +29,26 @@ export default function Events (timer, sounds) {
     buttonLight.addEventListener('click', () => changeTheme()) 
     buttonDark.addEventListener('click', () => changeTheme()) 
 
-    buttonPlay.addEventListener('click', function() {
+    buttonPlay.addEventListener('click', () => {
         timer.playClock()
         timer.countdown()
     })
 
-    buttonPause.addEventListener('click', function() {
+    buttonPause.addEventListener('click', () => {
         timer.pauseClock()
         timer.hold()
     })
 
-    buttonStop.addEventListener('click', function() {
+    buttonStop.addEventListener('click', () => {
         timer.resetClock()
         timer.resetTimer()
     })
     
-    buttonIncrease.addEventListener('click', function() {
+    buttonIncrease.addEventListener('click', () => {
         timer.addFiveMinutes()    
     })
     
-    buttonDecrease.addEventListener('click', function() {
+    buttonDecrease.addEventListener('click', () => {
         if (Number(minutesDisplay.textContent) >= 5) {
             timer.subtractFiveMinutes()                            
         } else {
@@ -53,22 +56,27 @@ export default function Events (timer, sounds) {
         }
     })
     
-    soundForest.addEventListener('click', function(){
+    soundForest.addEventListener('click', () => {
         soundForest.classList.toggle('active')  
         soundForest.className === 'forest active' ? sounds.forest.play() : sounds.forest.pause()
     })
+
+    //input
+    volForest.addEventListener('input', () => {
+        forest.volume = Number(volForest.value)
+    })
     
-    soundRain.addEventListener('click', function(){
+    soundRain.addEventListener('click', () => {
         soundRain.classList.toggle('active')
         soundRain.className === 'rain active' ? sounds.rain.play() : sounds.rain.pause()        
     })
         
-    soundPeople.addEventListener('click', function(){
+    soundPeople.addEventListener('click', () => {
         soundPeople.classList.toggle('active')
         soundPeople.className === 'people active' ? sounds.people.play() : sounds.people.pause()
     })
 
-    soundFire.addEventListener('click', function(){
+    soundFire.addEventListener('click', () => {
         soundFire.classList.toggle('active')
         soundFire.className === 'fire active' ? sounds.fire.play() : sounds.fire.pause()
     })   
