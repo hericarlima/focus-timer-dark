@@ -61,14 +61,17 @@ export default function Events (timer, sounds) {
         soundForest.className === 'forest active' ? sounds.forest.play() : sounds.forest.pause()
     })
 
-    //input
     volForest.addEventListener('input', () => {
-        forest.volume = Number(volForest.value)
+        sounds.forest.volume = Number(volForest.value)
     })
     
     soundRain.addEventListener('click', () => {
         soundRain.classList.toggle('active')
         soundRain.className === 'rain active' ? sounds.rain.play() : sounds.rain.pause()        
+    })
+
+    volRain.addEventListener('input', () => {
+        sounds.rain.volume = Number(volRain.value)
     })
         
     soundPeople.addEventListener('click', () => {
@@ -76,8 +79,16 @@ export default function Events (timer, sounds) {
         soundPeople.className === 'people active' ? sounds.people.play() : sounds.people.pause()
     })
 
+    volPeople.addEventListener('input', () => {
+        sounds.people.volume = Number(volPeople.value)
+    })
+
     soundFire.addEventListener('click', () => {
         soundFire.classList.toggle('active')
         soundFire.className === 'fire active' ? sounds.fire.play() : sounds.fire.pause()
     })   
+
+    volFire.addEventListener('input', () => {
+        sounds.fire.volume = Number(volFire.value)
+    })
 }

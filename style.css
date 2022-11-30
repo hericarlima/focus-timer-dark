@@ -56,50 +56,6 @@ main button svg > path {
     gap: 4rem;
 }
 
-/*cards*/
-
-.cards {
-    display: grid;
-    gap: 3.2rem;
-    grid-template-areas: "A B"
-    "C D";
-}
-
-.cards .forest {
-    grid-area: "A";
-}
-
-.cards .rain {
-    grid-area: "B";
-}
-
-.cards .people {
-    grid-area: "C";
-}
-
-.cards .fire {
-    grid-area: "D";
-}
-
-.forest,
-.rain, 
-.people, 
-.fire {
-    position: relative;
-}
-
-.cards button { 
-    background: var(--bg-card);
-    padding: 4.8rem;
-    cursor: pointer;
-    border-radius: 2.4rem;
-    transition: .4s;    
-}
-
-.cards button.active {
-    background-color: var(--card-active);
-}
-
 button {
     border: none;
     background-color: transparent;
@@ -113,15 +69,55 @@ button {
     right: 6.4rem;
 }
 
-input {
+/*cards*/
+
+.cards {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: "A B"
+    "C D";
+}
+
+.wrapper-card .forest {
+    grid-area: "A";
+}
+
+.wrapper-card .rain {
+    grid-area: "B";
+}
+
+.wrapper-card .people {
+    grid-area: "C";
+}
+
+.wrapper-card .fire {
+    grid-area: "D";
+}
+
+.wrapper-card {
+    position: relative;
+}
+
+.wrapper-card button { 
+    background: var(--bg-card);
+    padding: 4.8rem;
+    cursor: pointer;
+    border-radius: 2.4rem;
+    transition: .4s;    
+}
+
+.wrapper-card button.active {
+    background-color: var(--card-active);
+}
+
+.wrapper-card input {
     position: absolute;
+    z-index: 1;
+
     width: 9rem;
 
     left: 3.5rem;
     bottom: 1.5rem;
-    z-index: 1;
-
-    height: 4px;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
