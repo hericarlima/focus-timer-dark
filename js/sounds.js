@@ -4,6 +4,11 @@ export default function Sounds() {
     const people = new Audio('../sounds/people.wav')
     const fire = new Audio('../sounds/fire.wav')
     
+    forest.loop = true
+    rain.loop = true
+    people.loop = true
+    fire.loop = true
+
     return {
         forest,
         rain,

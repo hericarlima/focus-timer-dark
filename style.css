@@ -120,12 +120,12 @@ button {
     bottom: 1.5rem;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+.wrapper-card input[type="range"]::-webkit-slider-runnable-track {
     background: var(--text-color);
     height: 0.35rem;
-  }
+}
   
-input[type="range"]::-webkit-slider-thumb {
+.wrapper-card input[type="range"]::-webkit-slider-thumb {
     width: 1.5rem;
     height: 1.5rem;
     margin-top: -0.6rem;

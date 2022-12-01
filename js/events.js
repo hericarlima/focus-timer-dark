@@ -62,7 +62,7 @@ export default function Events (timer, sounds) {
     })
 
     volForest.addEventListener('input', () => {
-        sounds.forest.volume = Number(volForest.value)
+        sounds.forest.volume = volForest.value
     })
     
     soundRain.addEventListener('click', () => {
@@ -71,7 +71,7 @@ export default function Events (timer, sounds) {
     })
 
     volRain.addEventListener('input', () => {
-        sounds.rain.volume = Number(volRain.value)
+        sounds.rain.volume = volRain.value
     })
         
     soundPeople.addEventListener('click', () => {
@@ -80,7 +80,7 @@ export default function Events (timer, sounds) {
     })
 
     volPeople.addEventListener('input', () => {
-        sounds.people.volume = Number(volPeople.value)
+        sounds.people.volume = volPeople.value
     })
 
     soundFire.addEventListener('click', () => {
@@ -89,6 +89,6 @@ export default function Events (timer, sounds) {
     })   
 
     volFire.addEventListener('input', () => {
-        sounds.fire.volume = Number(volFire.value)
+        sounds.fire.volume = volFire.value
     })
 }
